@@ -35,6 +35,10 @@ namespace aZero::Audio {
 			return this->Init(engine, path);
 		}
 
+		bool IsPlaying() const {
+			return ma_sound_is_playing(m_Sound);
+		}
+
 	private:
 		bool Init(ma_engine& engine, std::string_view path)
 		{
